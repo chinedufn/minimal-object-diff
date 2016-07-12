@@ -43,6 +43,48 @@ console.log(myNewClientKnowledge)
 // { nothing: ':(' }
 ```
 
+## Patch Format
+
+```js
+var a = {
+  name: 'Eugene',
+  number: 42,
+  tags: ['tag1', 'tag2', 'tag3'],
+  scores: {
+    tetris: 1000,
+    carmageddon: 3
+  }
+}
+
+var b = {
+  name: 'Susan',
+  number: 43,
+  tags: ['tag1', 'tag4'],
+  scores: {
+    carmageddon: 3,
+    zelda: 3000
+  },
+  age: 37
+}
+*/
+
+console.log(objDiff.diff(a, b))
+/*
+{
+  x: {
+    name: 'Susan',
+    number: 43,
+    tags: ['tag1', 'tag4'],
+    scores: {
+      zelda: 3000
+    },
+    age: 37
+  },
+  d: ['scores.zelda']
+}
+*/
+```
+
 ## API
 
 ### `objDiff.diff(oldObj, newObj)` -> `patches`

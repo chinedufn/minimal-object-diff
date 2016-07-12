@@ -40,6 +40,41 @@ function getFixtures () {
       old: { hello: { foo: { bar: 'baz' } } },
       new: { hello: { foo: { bar: 'buzz' } } },
       expectedPatch: { x: { hello: { foo: { bar: 'buzz' } } } }
+    },
+    {
+      description: 'Test nested array props',
+      see: 'https://github.com/eugeneware/changeset/tree/4212805342266f745cad5297def64da062a85c30#example',
+      old: {
+        name: 'Eugene',
+        number: 42,
+        tags: ['tag1', 'tag2', 'tag3'],
+        scores: {
+          tetris: 1000,
+          carmageddon: 3
+        }
+      },
+      new: {
+        name: 'Susan',
+        number: 43,
+        tags: ['tag1', 'tag4'],
+        scores: {
+          carmageddon: 3,
+          zelda: 3000
+        },
+        age: 37
+      },
+      expectedPatch: {
+        x: {
+          name: 'Susan',
+          number: 43,
+          tags: ['tag1', 'tag4'],
+          scores: {
+            zelda: 3000
+          },
+          age: 37
+        },
+        d: ['scores.zelda']
+      }
     }
   ]
 }
