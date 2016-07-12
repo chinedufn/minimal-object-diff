@@ -29,6 +29,7 @@ var newClientKnowledge = { nothing: ':(' }
 var patches = objDiff.diff(oldClientKnowledge, newClientKnowledge)
 
 SendPatchesViaWebsocket(patches)
+```
 
 ```js
 // Later on the client side
