@@ -20,6 +20,7 @@ $ npm install --save minimal-object-diff
 ## Usage
 
 ```js
+// On our server
 var objDiff = require('minimal-object-diff')
 
 var oldClientKnowledge = { numBeavers: 50, foo: { bar: 'buzz' } }
@@ -27,10 +28,18 @@ var newClientKnowledge = { nothing: ':(' }
 
 var patches = objDiff.diff(oldClientKnowledge, newClientKnowledge)
 
-SendPatchesToAClientSomehow(patches)
+SendPatchesViaWebsocket(patches)
 
-// Later on the client
-objDiff.patch(myOldClientKnowledge, JSON.parse(patches))
+```js
+// Later on the client side
+var objDiff = require('minimal-object-diff')
+
+console.log(myOldClientKnowledge)
+// { numBeavers: 50, foo: { bar: 'buzz' } }
+
+var myNewClientKnowledge = objDiff.patch(myOldClientKnowledge, JSON.parse(patches))
+console.log(myNewClientKnowledge)
+// { nothing: ':(' }
 ```
 
 ## API
