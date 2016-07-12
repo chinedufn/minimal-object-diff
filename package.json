@@ -1,0 +1,33 @@
+{
+  "name": "minimal-object-diff",
+  "version": "0.0.1",
+  "description": "Create minimal diffs between two objects for sending over a network",
+  "main": "src/minimal-object-diff.js",
+  "dependencies": {
+    "changeset": "^0.1.0",
+    "dot-prop": "^3.0.0",
+    "standard": "^7.1.2",
+    "tape": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "standard && node test/minimal-object-diff.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinedufn/minimal-object-diff.git"
+  },
+  "keywords": [
+    "object",
+    "diff",
+    "minimal",
+    "patch",
+    "apply"
+  ],
+  "author": "Chinedu Francis Nwafili <frankie.nwafili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chinedufn/minimal-object-diff/issues"
+  },
+  "homepage": "https://github.com/chinedufn/minimal-object-diff#readme"
+}
