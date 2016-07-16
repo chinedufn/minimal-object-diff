@@ -1,6 +1,6 @@
 {
   "name": "minimal-object-diff",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Create minimal diffs between two objects for sending over a network",
   "main": "src/minimal-object-diff.js",
   "dependencies": {
