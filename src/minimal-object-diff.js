@@ -36,6 +36,8 @@ function PatchObject (object, patches) {
   }
 }
 
+// TODO: If there are a lot of deletions it would be more efficient to just return the end result object as an overwrite
+// TODO: minimal-array-diff for deciding whether to return an array or a list of keys to add / delete
 function minimizeChangesetPatches (patches, oldObj) {
   // If the objects are deep equal, we return null
   if (patches.length === 0) { return null }
