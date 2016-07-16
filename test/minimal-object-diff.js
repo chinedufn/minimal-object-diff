@@ -7,8 +7,8 @@ test('Test diffs and patches', function (t) {
   t.plan(2 * testFixtures.length)
 
   testFixtures.forEach(function (fixture) {
-    var patches = objDiff.diff(fixture.old, fixture.new, fixture.description + ' - diff')
-    t.deepEqual(patches, fixture.expectedPatch, fixture.description)
+    var patches = objDiff.diff(fixture.old, fixture.new)
+    t.deepEqual(patches, fixture.expectedPatch, fixture.description + ' - diff')
     t.deepEqual(objDiff.patch(fixture.old, patches), fixture.new, fixture.description + ' - patch')
   })
 })
@@ -73,7 +73,7 @@ function getFixtures () {
           },
           age: 37
         },
-        d: ['scores.zelda']
+        d: ['scores.tetris']
       }
     }
   ]
