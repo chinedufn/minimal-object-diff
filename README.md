@@ -80,7 +80,7 @@ console.log(objDiff.diff(a, b))
     },
     age: 37
   },
-  d: ['scores.zelda']
+  d: ['scores.tetris']
 }
 */
 ```
