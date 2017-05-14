@@ -1,6 +1,14 @@
 minimal-object-diff [![npm version](https://badge.fury.io/js/minimal-object-diff.svg)](http://badge.fury.io/js/minimal-object-diff) [![Build Status](https://travis-ci.org/chinedufn/minimal-object-diff.svg?branch=master)](https://travis-ci.org/chinedufn/minimal-object-diff)
 ===============
 
+# DO NOT USE THIS!
+
+Use [`fast-json-patch`](https://github.com/Starcounter-Jack/JSON-Patch) instead, or some other implementation of [JSON Patch RFC 6902](https://tools.ietf.org/html/rfc6902)
+
+This is slow, leads the larger patches and it's much better to use a real standard instead of the made up format below.
+
+---
+
 > Create and apply a tiny representation of diffs between two objects. Useful for sending diffs over a network
 
 ## Motivation
